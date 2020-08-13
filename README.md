@@ -1,4 +1,8 @@
-# Bin2Dec
+## Bin2Dec
+
+![Binary to Decimal](./bin-2-dec.gif)
+
+## Description
 
 **Tier:** 1-Beginner
 
