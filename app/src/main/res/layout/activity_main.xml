@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/app_name"
+            android:textColor="@color/black_custom"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/sora_medium"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:text="@string/symbol_bin"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                app:fontFamily="@font/sora_medium" />
+
+
+            <EditText
+                android:id="@+id/etBin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="end"
+                android:hint="@string/example_bin"
+                android:inputType="number"
+                android:textColor="@color/gray"
+                android:textSize="64sp"
+                android:autofillHints="number" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardDec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/secondary_bg"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="40dp"
+                android:text="@string/result"
+                android:textColor="@color/cream"
+                android:textSize="30sp"
+                app:fontFamily="@font/fjalla_one"
+                app:layout_constraintBottom_toTopOf="@+id/layoutDec" />
+
+            <LinearLayout
+                android:id="@+id/layoutDec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnDummy"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/symbol_dec"
+                    android:textColor="@color/black_custom"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/sora_medium" />
+
+
+                <TextView
+                    android:id="@+id/tvDec"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/example_dec"
+                    android:textColor="@color/cream"
+                    android:textSize="40sp"
+                    app:fontFamily="@font/sora_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnDummy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_bg"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="20dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/icon_convert"
+                    android:src="@drawable/ic_convert" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:text="@string/convert_it"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/fjalla_one" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/btnConvert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_bg"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="20dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/icon_convert"
+                    android:src="@drawable/ic_convert" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:text="@string/convert_it"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/fjalla_one" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

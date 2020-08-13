@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bin2Dec</string>
+    <string name="binary">Binary</string>
+    <string name="symbol_bin">(2)</string>
+    <string name="example_bin">0101</string>
+    <string name="result">RESULT</string>
+    <string name="symbol_dec">(10)</string>
+    <string name="example_dec">5</string>
+    <string name="icon_convert">Icon Convert</string>
+    <string name="convert_it">CONVERT IT</string>
+</resources>
