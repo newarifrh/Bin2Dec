@@ -31,9 +31,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (charSequence.toString().equals("")) return;
+
                 if (!charSequence.toString().matches("\\b[01]+\\b")) {
-                    binding.etBin.setText(charSequence.toString().substring(0, binding.etBin.length() - 1));
-                    binding.etBin.setSelection(binding.etBin.length());
+                    int selectionStart = binding.etBin.getSelectionStart();
+                    String result = charSequence.toString().replaceAll("[^0-1.]", "");
+                    binding.etBin.setText(result);
+                    binding.etBin.setSelection(selectionStart-1);
                 }
             }
 
